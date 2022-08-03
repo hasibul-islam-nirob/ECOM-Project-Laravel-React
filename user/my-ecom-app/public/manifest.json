@@ -11,52 +11,52 @@
     "background_color":"#FFFFFF",
     "icons":[
         {
-          "src":"Images/72.png",
+          "src":"/72.png",
           "sizes":"72x72",
           "type":"image/png"
         },
         {
-          "src":"Images/88.png",
+          "src":"/88.png",
           "sizes":"88x88",
-          "type":"image/png"
+          "type":"/png"
         },
         {
-          "src":"Images/120.png",
+          "src":"/120.png",
           "sizes":"120x120",
           "type":"image/png"
         },
         {
-          "src":"Images/128.png",
+          "src":"/128.png",
           "sizes":"128x128",
           "type":"image/png"
         },
         {
-          "src":"Images/144.png",
+          "src":"/144.png",
           "sizes":"144x144",
           "type":"image/png"
         },
         {
-          "src":"Images/152.png",
+          "src":"/152.png",
           "sizes":"152x152",
           "type":"image/png"
         },
         {
-          "src":"Images/196.png",
+          "src":"/196.png",
           "sizes":"196x196",
           "type":"image/png"
         },
         {
-          "src":"Images/256.png",
+          "src":"/256.png",
           "sizes":"256x256",
           "type":"image/png"
         },
         {
-          "src":"Images/475.png",
+          "src":"/475.png",
           "sizes":"475x233",
           "type":"image/png"
         },
         {
-          "src":"Images/512.png",
+          "src":"/512.png",
           "sizes":"512x512",
           "type":"image/png"
         }
