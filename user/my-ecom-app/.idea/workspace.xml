@@ -10,6 +10,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -27,14 +28,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Laravel\ECOM-Project-Laravel-React\user\my-ecom-app\src\assets\images" />
+      <recent name="G:\Laravel\ECOM-Project-Laravel-React\user\my-ecom-app\src\assets\css" />
       <recent name="G:\Laravel\ECOM-Project-Laravel-React\user\my-ecom-app\public" />
     </key>
   </component>
@@ -54,6 +60,8 @@
       <workItem from="1660075086209" duration="18000" />
       <workItem from="1660075122590" duration="170000" />
       <workItem from="1660079642989" duration="1363000" />
+      <workItem from="1660243398186" duration="6221000" />
+      <workItem from="1660330813064" duration="6671000" />
     </task>
     <servers />
   </component>
