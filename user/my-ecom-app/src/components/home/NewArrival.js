@@ -25,7 +25,7 @@ class NewArrival extends Component {
             dots: false,
             infinite: true,
             speed: 500,
-            autoPlay:true,
+            autoplay:true,
             autoplaySpeed:3000,
             slidesToShow: 4,
             slidesToScroll: 1,
