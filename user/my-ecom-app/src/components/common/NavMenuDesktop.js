@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {Col, Container, Navbar, Row, Button} from "react-bootstrap";
 import logo from '../../assets/images/475.png';
+import {Link} from "react-router-dom";
 
 
 class NavMenuDesktop extends Component {
@@ -25,7 +26,7 @@ class NavMenuDesktop extends Component {
                             <a className="btn" href="#"> <i className="fa h4 fa-heart"></i> <sup><span className="badge bg-danger">4</span></sup> </a>
                             <a className="btn" href="#"> <i className="fa h4 fa-bell"></i> <sup><span className="badge bg-danger">4</span></sup> </a>
                             <a className="btn" href="#"> <i className="fa h4 fa-mobile-alt"></i></a>
-                            <a href="" className="h4 btn">Login</a>
+                            <Link to="/onboard" href="" className="h4 btn">Login</Link>
                         </Col>
                     </Row>
                 </Container>

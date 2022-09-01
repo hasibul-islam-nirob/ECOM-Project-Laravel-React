@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Col, Container, Row} from "react-bootstrap";
+import {Link} from "react-router-dom";
 
 class FooterDesktop extends Component {
     render() {
@@ -19,25 +20,25 @@ class FooterDesktop extends Component {
                         
                         <Col className="p-2" lg={3} md={3} sm={6} xs={12}>
                             <h5 className="footer-menu-title">The Company</h5>
-                            <a href="" className="footer-link">About</a><br/>
-                            <a href="" className="footer-link">About</a><br/>
-                            <a href="" className="footer-link">About</a><br/>
-                            <a href="" className="footer-link">About</a><br/>
-
+                            <a href="" className="footer-link">About Us</a><br/>
+                            <Link to="/contact" className="footer-link">Contact Us</Link><br/>
+                            <a href="" className="footer-link">Our Team</a><br/>
+                            <br/>
+                            <h5 className="footer-menu-title">Office Address</h5>
+                            <a href="" className="footer-link">Farmgate, Tejgaon, Dhaka 1215</a><br/>
+                            <a href="" className="footer-link">contact.nirob@gmail.com</a><br/>
                         </Col>
                         <Col className="p-2" lg={3} md={3} sm={6} xs={12}>
-                            <h5 className="footer-menu-title">The Company</h5>
-                            <a href="" className="footer-link">About</a><br/>
-                            <a href="" className="footer-link">Team</a><br/>
+                            <h5 className="footer-menu-title">More Info</h5>
+                            <a href="" className="footer-link">How To Purchase</a><br/>
                             <a href="" className="footer-link">Privacy Policy</a><br/>
-                            <a href="" className="footer-link">Contact</a><br/>
+                            <a href="" className="footer-link">Refund Policy</a><br/>
+                            <a href="" className="footer-link">Payment Policy</a><br/>
                         </Col>
                         <Col className="p-2" lg={3} md={3} sm={6} xs={12}>
-                            <h5 className="footer-menu-title">The Company</h5>
-                            <a href="" className="footer-link">About</a><br/>
-                            <a href="" className="footer-link">About</a><br/>
-                            <a href="" className="footer-link">About</a><br/>
-                            <a href="" className="footer-link">About</a><br/>
+                            <h5 className="footer-menu-title">Download Apps</h5>
+                            <a href="" className="footer-link">Android</a><br/>
+                            <a href="" className="footer-link">ISO</a><br/>
 
                         </Col>
                     </Row>

@@ -28,17 +28,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images/login" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Laravel\ECOM-Project-Laravel-React\user\my-ecom-app\src\assets\images\login" />
       <recent name="G:\Laravel\ECOM-Project-Laravel-React\user\my-ecom-app\src\assets\images" />
       <recent name="G:\Laravel\ECOM-Project-Laravel-React\user\my-ecom-app\src\assets\css" />
       <recent name="G:\Laravel\ECOM-Project-Laravel-React\user\my-ecom-app\public" />
@@ -65,6 +67,12 @@
       <workItem from="1660434584291" duration="4441000" />
       <workItem from="1660439642516" duration="5253000" />
       <workItem from="1660677203220" duration="9844000" />
+      <workItem from="1661806334355" duration="4548000" />
+      <workItem from="1662028872023" duration="496000" />
+      <workItem from="1662029401332" duration="23000" />
+      <workItem from="1662029452863" duration="813000" />
+      <workItem from="1662030343288" duration="951000" />
+      <workItem from="1662060970851" duration="3944000" />
     </task>
     <servers />
   </component>
