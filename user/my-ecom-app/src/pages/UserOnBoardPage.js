@@ -6,6 +6,11 @@ import FooterMobile from "../components/common/FooterMobile";
 import UserOnBoard from "../components/common/UserOnBoard";
 
 class UserOnBoardPage extends Component {
+
+    componentDidMount() {
+        window.scroll(0,0);
+    }
+
     render() {
         return (
             <Fragment>
