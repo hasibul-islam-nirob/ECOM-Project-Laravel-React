@@ -20,7 +20,7 @@ class FooterDesktop extends Component {
                         
                         <Col className="p-2" lg={3} md={3} sm={6} xs={12}>
                             <h5 className="footer-menu-title">The Company</h5>
-                            <a href="" className="footer-link">About Us</a><br/>
+                            <Link to="/about" className="footer-link">About Us</Link><br/>
                             <Link to="/contact" className="footer-link">Contact Us</Link><br/>
                             <a href="" className="footer-link">Our Team</a><br/>
                             <br/>
@@ -30,10 +30,10 @@ class FooterDesktop extends Component {
                         </Col>
                         <Col className="p-2" lg={3} md={3} sm={6} xs={12}>
                             <h5 className="footer-menu-title">More Info</h5>
-                            <a href="" className="footer-link">How To Purchase</a><br/>
-                            <a href="" className="footer-link">Privacy Policy</a><br/>
-                            <a href="" className="footer-link">Refund Policy</a><br/>
-                            <a href="" className="footer-link">Payment Policy</a><br/>
+                            <Link to="/purchase" className="footer-link">How To Purchase</Link><br/>
+                            <Link to="/policy" className="footer-link">Privacy Policy</Link><br/>
+                            <Link to="/refund" className="footer-link">Refund Policy</Link><br/>
+                            <Link to="/paymentPolicy" className="footer-link">Payment Policy</Link><br/>
                         </Col>
                         <Col className="p-2" lg={3} md={3} sm={6} xs={12}>
                             <h5 className="footer-menu-title">Download Apps</h5>
