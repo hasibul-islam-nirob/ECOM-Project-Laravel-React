@@ -9,6 +9,7 @@ import PurchasePage from "../pages/PurchasePage";
 import Refund from "../components/others/Refund";
 import RefundPage from "../pages/RefundPage";
 import PaymentPolicyPage from "../pages/PaymentPolicyPage";
+import ProductDetailsPage from "../pages/ProductDetailsPage";
 
 class AppRoute extends Component {
     render() {
@@ -23,6 +24,7 @@ class AppRoute extends Component {
                     <Route exact path="/purchase" component={PurchasePage} />
                     <Route exact path="/refund" component={RefundPage} />
                     <Route exact path="/paymentPolicy" component={PaymentPolicyPage} />
+                    <Route exact path="/productDetails" component={ProductDetailsPage} />
                 </Switch>
             </Fragment>
         );
