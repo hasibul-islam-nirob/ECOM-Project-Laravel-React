@@ -40,7 +40,9 @@ class FooterDesktop extends Component {
                             <a href="" className="footer-link">Android</a><br/>
                             <a href="" className="footer-link">ISO</a><br/>
 
+                            <div id="google_translate_element"></div>
                         </Col>
+
                     </Row>
                 </Container>
 
@@ -50,6 +52,8 @@ class FooterDesktop extends Component {
                             <p>&copy; 2022</p>
                         </Row>
                     </Container>
+
+
                 </Container>
             </div>
         );

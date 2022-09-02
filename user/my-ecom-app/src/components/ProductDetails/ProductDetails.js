@@ -113,7 +113,8 @@ class ProductDetails extends Component {
                         </Col>
                         <Col className="p-1" md={6} lg={6} sm={12} xs={12}>
                             <div className="shadow-sm p-3 bg-white">
-                                <h5>Hasibul Islam Nirob *****</h5>
+                                <h5 className="mt-2">Reviews</h5>
+                                <h6>Hasibul Islam Nirob *****</h6>
                                 <p>consectetur adipisicing elit. Consequatur laudantium modi quaerat quo. Consequuntur harum odit provident, quis tempora totam vitae. Animi dignissimos dolores itaque magnam nulla odit similique tempore!</p>
                             </div>
                         </Col>
