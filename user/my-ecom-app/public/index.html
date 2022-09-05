@@ -31,6 +31,19 @@
       });
     </script>
 
+    <!--Use Google Translator -->
+    <script>
+      function googleTranslateElementTnit() {
+        var config = {
+          pageLanguage:'en',
+          includedLanguages:'bn,en,hi',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        };
+        var langOptionsID = "google_translate_element";
+        new google.translate.TranslateElement(config, langOptionsID);
+      }
+    </script>
+
   </head>
 
   
@@ -39,17 +52,7 @@
     <div id="root"></div>
 
 
-  <script>
-    function googleTranslateElementTnit() {
-      var config = {
-        pageLanguage:'en',
-        includedLanguages:'bn,en,hi',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      };
-      var langOptionsID = "google_translate_element";
-      new google.translate.TranslateElement(config, langOptionsID);
-    }
-  </script>
+
   
   </body>
 </html>

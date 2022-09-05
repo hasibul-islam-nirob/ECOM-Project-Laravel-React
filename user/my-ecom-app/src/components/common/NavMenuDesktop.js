@@ -12,7 +12,7 @@ class NavMenuDesktop extends Component {
                     <Row>
                         <Col lg={4} md={4} sm={12} xs={12}>
                             <a className="btn" href="#"> <img className="nav-logo" src={logo} alt=""/> </a>
-                            <Button className="cart-btn"><i className="fa fa-shopping-cart"></i>3 items</Button>
+                            <Link to="/cartList" className="cart-btn"><i className="fa fa-shopping-cart"></i>3 items</Link>
                         </Col>
 
                         <Col lg={4} md={4} sm={12} xs={12}>
