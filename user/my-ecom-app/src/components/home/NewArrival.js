@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Slider from "react-slick";
-import {Card, Col, Container, Row} from "react-bootstrap";
+import {Card, Container} from "react-bootstrap";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -13,10 +13,10 @@ class NewArrival extends Component {
         this.previous = this.previous.bind(this)
     }
 
-    next(){
+    next=()=>{
         this.slider.slickNext();
     }
-    previous(){
+    previous=()=>{
         this.slider.slickPrev();
     }
 

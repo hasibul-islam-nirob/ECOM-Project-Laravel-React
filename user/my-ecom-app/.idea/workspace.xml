@@ -18,6 +18,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="2C1XfqTHNs7izgN12KdM2br5iSC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -28,7 +36,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images/product" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.standard" value="true" />
@@ -40,11 +48,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Laravel\ECOM-Project-Laravel-React\user\my-ecom-app\src" />
       <recent name="G:\Laravel\ECOM-Project-Laravel-React\user\my-ecom-app\src\assets\images\product" />
       <recent name="G:\Laravel\ECOM-Project-Laravel-React\user\my-ecom-app\src\assets\images\login" />
       <recent name="G:\Laravel\ECOM-Project-Laravel-React\user\my-ecom-app\src\assets\images" />
       <recent name="G:\Laravel\ECOM-Project-Laravel-React\user\my-ecom-app\src\assets\css" />
-      <recent name="G:\Laravel\ECOM-Project-Laravel-React\user\my-ecom-app\public" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -76,7 +84,11 @@
       <workItem from="1662060970851" duration="10612000" />
       <workItem from="1662143513907" duration="7862000" />
       <workItem from="1662314409430" duration="3166000" />
-      <workItem from="1662392229492" duration="2425000" />
+      <workItem from="1662392229492" duration="3020000" />
+      <workItem from="1662432186920" duration="6786000" />
+      <workItem from="1662494211328" duration="10499000" />
+      <workItem from="1662522614814" duration="12243000" />
+      <workItem from="1662560594194" duration="4220000" />
     </task>
     <servers />
   </component>

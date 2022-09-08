@@ -6,7 +6,6 @@ import ContactPage from "../pages/ContactPage";
 import AboutPage from "../pages/AboutPage";
 import PolicyPage from "../pages/PolicyPage";
 import PurchasePage from "../pages/PurchasePage";
-import Refund from "../components/others/Refund";
 import RefundPage from "../pages/RefundPage";
 import PaymentPolicyPage from "../pages/PaymentPolicyPage";
 import ProductDetailsPage from "../pages/ProductDetailsPage";
