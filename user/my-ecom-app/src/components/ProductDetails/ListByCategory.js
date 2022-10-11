@@ -1,32 +1,16 @@
 import React, {Component, Fragment} from 'react';
-import {Card, Col, Container, Row} from "react-bootstrap";
-import axios from "axios";
-import ApiURL from "../../api/ApiURL";
+import {Breadcrumb, Card, Col, Container, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
 
-class Collection extends Component {
-
-    constructor() {
-        super();
-        this.state = {
-            ProductData:[]
-        }
-    }
-
-    componentDidMount() {
-        axios.get(ApiURL.ProductListByRemark("Collection")).then(res=>{
-            this.setState({ProductData:res.data});
-        }).catch(err=>{
-
-        })
-    }
+class ListByCategory extends Component {
 
     render() {
 
-        const MyList = this.state.ProductData;
+        const Category=this.props.Category;
+        const MyList = this.props.ProductData;
         const MyView = MyList.map((ProductList,i)=>{
             if(ProductList.special_price==="NA"){
-                return <Col className="p-0" key={1} xl={3} lg={3} md={3} sm={6} xs={6}>
+                return <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6} >
                     <Link to={"productDetails/"+ProductList.product_code}>
                         <Card className="card h-100 w-100  image-box ">
                             <img src={ProductList.image} alt=""/>
@@ -40,7 +24,7 @@ class Collection extends Component {
             }
             else{
 
-                return <Col className="p-0" key={1} xl={3} lg={3} md={3} sm={6} xs={6}>
+                return <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6} >
                     <Link to={"productDetails/"+ProductList.product_code}>
                         <Card className="card h-100 w-100  image-box ">
                             <img src={ProductList.image} alt=""/>
@@ -57,18 +41,24 @@ class Collection extends Component {
 
         });
 
+
         return (
             <Fragment>
-                <Container className="text-center card py-5" fluid={true}>
-                    <h5 className="section-title">SPECIAL COLLECTION</h5>
-                    <p className="section-sub-title pb-3">Some Of Our Exclusive Collection, You May Like</p>
+                <Container className="text-center TopSection" >
                     <Row>
+                        <Breadcrumb className="shadow-sm w-100 bg-white">
+                            <Breadcrumb.Item> <Link to="/">Home</Link>    </Breadcrumb.Item>
+                            <Breadcrumb.Item> <Link to={"/ProductListByCategory/"+Category}>{Category}</Link>    </Breadcrumb.Item>
+                        </Breadcrumb>
+                    </Row>
+                    <Row className="pt-3">
                         {MyView}
                     </Row>
                 </Container>
+
             </Fragment>
         );
     }
 }
 
-export default Collection;
+export default ListByCategory;

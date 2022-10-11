@@ -1,80 +1,69 @@
 import React, {Component, Fragment} from 'react';
 import {Card, Col, Container, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
+import axios from "axios";
+import ApiURL from "../../api/ApiURL";
 
 class FeaturedProducts extends Component {
+
+    constructor() {
+        super();
+        this.state = {
+            ProductData:[]
+        }
+    }
+
+    componentDidMount() {
+        axios.get(ApiURL.ProductListByRemark("Featured")).then(res=>{
+            this.setState({ProductData:res.data});
+        }).catch(err=>{
+
+        })
+    }
+
     render() {
+
+        const MyList = this.state.ProductData;
+        const MyView = MyList.map((ProductList,i)=>{
+            if(ProductList.special_price==="NA"){
+                return <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6} >
+                    <Link to={"productDetails/"+ProductList.product_code}>
+                        <Card className="card h-100 w-100  image-box ">
+                            <img src={ProductList.image} alt=""/>
+                            <Card.Body>
+                                <h5 className="product-name-on-card">{(ProductList.title).substring(0,50) }</h5>
+                                <p className="product-price-on-card p-1">Price: { ProductList.price}TK</p>
+                            </Card.Body>
+                        </Card>
+                    </Link>
+                </Col>
+            }
+            else{
+
+                return <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6} >
+                    <Link to={"productDetails/"+ProductList.product_code}>
+                        <Card className="card h-100 w-100  image-box ">
+                            <img src={ProductList.image} alt=""/>
+                            <Card.Body>
+                                <h5 className="product-name-on-card">{(ProductList.title).substring(0,50) }</h5>
+                                <p className="product-price-on-card">
+                                    Price: <strike class="text-secondary">{ ProductList.price}TK</strike>  { ProductList.special_price}TK
+                                </p>
+                            </Card.Body>
+                        </Card>
+                    </Link>
+                </Col>
+            }
+
+        });
+
         return (
             <Fragment>
                 <Container className="text-center py-5" fluid={true}>
                     <h5 className="section-title">FEATURED PRODUCTS</h5>
                     <p className="section-sub-title pb-3">Some Of Our Exclusive Collection, You May Like</p>
                     <Row>
-
-                        <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-                            <Link to="/productDetails">
-                                <Card className="image-box card">
-                                    <img src="https://static-01.daraz.com.bd/p/44fac340a6fdceb7925d22b006a3aa22.jpg" alt=""/>
-                                    <Card.Body>
-                                        <h6 className="product-name-on-card">Outdoor Small Mini Backpack</h6>
-                                        <p className="product-price-on-card">Price: ৳ 300</p>
-                                    </Card.Body>
-                                </Card>
-                            </Link>
-                        </Col>
-
-                        <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-                            <Link to="/productDetails">
-                                <Card className="image-box card">
-                                    <img src="https://static-01.daraz.com.bd/p/44fac340a6fdceb7925d22b006a3aa22.jpg" alt=""/>
-                                    <Card.Body>
-                                        <h6 className="product-name-on-card">Outdoor Small Mini Backpack</h6>
-                                        <p className="product-price-on-card">Price: ৳ 300</p>
-                                    </Card.Body>
-                                </Card>
-                            </Link>
-                        </Col>
-
-                        <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-                            <Card className="image-box card">
-                                <img src="https://static-01.daraz.com.bd/p/44fac340a6fdceb7925d22b006a3aa22.jpg" alt=""/>
-                                <Card.Body>
-                                    <h6 className="product-name-on-card">Outdoor Small Mini Backpack</h6>
-                                    <p className="product-price-on-card">Price: ৳ 300</p>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-
-                        <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-                            <Card className="image-box card">
-                                <img src="https://static-01.daraz.com.bd/p/44fac340a6fdceb7925d22b006a3aa22.jpg" alt=""/>
-                                <Card.Body>
-                                    <h6 className="product-name-on-card">Outdoor Small Mini Backpack</h6>
-                                    <p className="product-price-on-card">Price: ৳ 300</p>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-
-                        <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-                            <Card className="image-box card">
-                                <img src="https://static-01.daraz.com.bd/p/44fac340a6fdceb7925d22b006a3aa22.jpg" alt=""/>
-                                <Card.Body>
-                                    <h6 className="product-name-on-card">Outdoor Small Mini Backpack</h6>
-                                    <p className="product-price-on-card">Price: ৳ 300</p>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-
-                        <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6}>
-                            <Card className="image-box card">
-                                <img src="https://static-01.daraz.com.bd/p/44fac340a6fdceb7925d22b006a3aa22.jpg" alt=""/>
-                                <Card.Body>
-                                    <h6 className="product-name-on-card">Outdoor Small Mini Backpack</h6>
-                                    <p className="product-price-on-card">Price: ৳ 300</p>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-
+                        {MyView}
                     </Row>
                 </Container>
             </Fragment>

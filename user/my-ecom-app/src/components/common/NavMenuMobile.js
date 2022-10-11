@@ -2,18 +2,29 @@ import React, {Component, Fragment} from 'react';
 import {Button, Col, Container, Row} from "react-bootstrap";
 import logo from "../../assets/images/475.png";
 import MegaMenuMobile from "../home/MegaMenuMobile";
+import axios from "axios";
+import ApiURL from "../../api/ApiURL";
 
 class NavMenuMobile extends Component {
 
     constructor() {
         super();
         this.state={
-            SideNavState:"sideNavOpen",
-            ContentOverState:"ContentOverlayOpen",
+            SideNavState:"sideNavClose",
+            ContentOverState:"ContentOverlayClose",
             MenuData:[],
             RedirectHome:false,
-            cartCount:0
+            cartCount:0,
+
         }
+    }
+
+    componentDidMount() {
+        axios.get(ApiURL.sendCategoryDetails).then(res=>{
+            this.setState({MenuData:res.data});
+        }).catch(err=>{
+
+        })
     }
 
     MenuBarClickHandler=()=>{
@@ -49,7 +60,7 @@ class NavMenuMobile extends Component {
                 </Container>
 
                 <div className={this.state.SideNavState}>
-                    <MegaMenuMobile/>
+                    <MegaMenuMobile data={this.state.MenuData}/>
                 </div>
 
                 <div onClick={this.ContentOverlayClickHandler}  className={this.state.ContentOverState}>
