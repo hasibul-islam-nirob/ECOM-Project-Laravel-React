@@ -1,6 +1,7 @@
 class ApiURL{
 
-    static BaseURL = "https://ecom-admin.hinirob.com/api/";
+    //static BaseURL = "https://ecom-admin.hinirob.com/api/";
+    static BaseURL = "http://127.0.0.1:8000/api/";
 
     static visitorDetails = this.BaseURL+"getVisitorInfo";
     static sendContactDetails = this.BaseURL+"sendContactDetails";
