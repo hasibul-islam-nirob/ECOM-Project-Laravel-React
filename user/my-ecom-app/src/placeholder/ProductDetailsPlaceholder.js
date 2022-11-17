@@ -1,5 +1,5 @@
 import React, {Component,Fragment} from 'react';
-import DetailsImage from '../../assets/images/DetailsImage.svg'
+import DetailsImage from '../assets/images/DetailsImage.svg'
 class ProductDetailsPlaceholder extends Component {
     render() {
         return (

@@ -6,6 +6,7 @@ import FooterMobile from "../components/common/FooterMobile";
 import ListByCategory from "../components/ProductDetails/ListByCategory";
 import axios from "axios";
 import ApiURL from "../api/ApiURL";
+import ProductListLoader from "../placeholder/ProductListLoader";
 
 class ProductListByCategoryPage extends Component {
 
@@ -13,7 +14,9 @@ class ProductListByCategoryPage extends Component {
         super();
         this.state={
             Category:match.params.Category,
-            ProductData:[]
+            ProductData:[],
+            isLoading:"",
+            MainDiv:"d-none"
         }
     }
 
@@ -21,7 +24,7 @@ class ProductListByCategoryPage extends Component {
         window.scroll(0,0)
 
         axios.get(ApiURL.ProductListByCategory(this.state.Category)).then(res=>{
-            this.setState({ProductData:res.data});
+            this.setState({ProductData:res.data, isLoading:"d-none", MainDiv:" "});
         }).catch(err=>{
 
         })
@@ -37,7 +40,10 @@ class ProductListByCategoryPage extends Component {
                     <NavMenuMobile/>
                 </div>
 
-                <ListByCategory Category={this.state.Category} ProductData={this.state.ProductData} />
+                <ProductListLoader isLoading={this.state.isLoading}/>
+                <div className={this.state.MainDiv}>
+                    <ListByCategory Category={this.state.Category} ProductData={this.state.ProductData} />
+                </div>
 
                 <div className="Desktop">
                     <FooterDesktop/>
