@@ -10,7 +10,7 @@ class HomeTopMobile extends Component {
         super();
         this.state = {
             SliderData:[],
-            isLoading:"",
+            isLoading:"TopSection",
             MainDiv:"d-none"
         }
     }

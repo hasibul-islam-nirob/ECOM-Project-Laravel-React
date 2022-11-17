@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import Slider from "react-slick";
 import {Card, Col, Container} from "react-bootstrap";
 
@@ -7,13 +7,16 @@ import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
 import ApiURL from "../../api/ApiURL";
 import {Link} from "react-router-dom";
+import NewArrivalPlaceholder from "../../placeholder/NewArrivalPlaceholder";
 
 class NewArrival extends Component {
 
     constructor() {
         super();
         this.state = {
-            ProductData:[]
+            ProductData:[],
+            isLoading:"TopSection",
+            MainDiv:"d-none"
         }
         this.next = this.next.bind(this);
         this.previous = this.previous.bind(this)
@@ -21,7 +24,7 @@ class NewArrival extends Component {
 
     componentDidMount() {
         axios.get(ApiURL.ProductListByRemark("New")).then(res=>{
-            this.setState({ProductData:res.data});
+            this.setState({ProductData:res.data, isLoading:"d-none", MainDiv:" "});
         }).catch(err=>{
 
         })
@@ -108,20 +111,26 @@ class NewArrival extends Component {
 
         return (
 
-            <Container className="text-center BetweenTwoSection pt-4 " fluid={true}>
-                <h5 className="section-title px-0 mx-0">NEW ARRIVAL   <a className="btn btn-sm ml-2 site-btn" onClick={this.previous} >
-                        <i className="fa fa-angle-left"/>
-                    </a>  <a className="btn btn-sm ml-2 site-btn" onClick={this.next}>
-                        <i className="fa fa-angle-right"/>
-                    </a>
-                </h5>
-                <p className="section-sub-title pb-3">Some Of Our Exclusive Collection, You May Like</p>
+            <Fragment>
+                <NewArrivalPlaceholder isLoading={this.state.isLoading}/>
 
-                    <Slider ref={ c=>(this.slider=c) } {...settings}>
-                        {MyView}
-                    </Slider>
+                <div className={this.state.MainDiv}>
+                    <Container className="text-center BetweenTwoSection pt-4 " fluid={true}>
+                        <h5 className="section-title px-0 mx-0">NEW ARRIVAL   <a className="btn btn-sm ml-2 site-btn" onClick={this.previous} >
+                            <i className="fa fa-angle-left"/>
+                        </a>  <a className="btn btn-sm ml-2 site-btn" onClick={this.next}>
+                            <i className="fa fa-angle-right"/>
+                        </a>
+                        </h5>
+                        <p className="section-sub-title pb-3">Some Of Our Exclusive Collection, You May Like</p>
 
-            </Container>
+                        <Slider ref={ c=>(this.slider=c) } {...settings}>
+                            {MyView}
+                        </Slider>
+
+                    </Container>
+                </div>
+            </Fragment>
         );
     }
 }

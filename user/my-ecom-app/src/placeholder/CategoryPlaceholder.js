@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import cardPhotoPlaceholder from '../../assets/images/cardPhotoPlaceholder.svg'
+import cardPhotoPlaceholder from '../assets/images/cardPhotoPlaceholder.svg'
 class CategoryPlaceholder extends Component {
     render() {
         let isLoading=this.props.isLoading;

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import cardPhotoPlaceholder from "../../assets/images/cardPhotoPlaceholder.svg";
+import cardPhotoPlaceholder from "../assets/images/cardPhotoPlaceholder.svg";
 import {Container} from "react-bootstrap";
 
 class SpecialCollectionPlaceholder extends Component {

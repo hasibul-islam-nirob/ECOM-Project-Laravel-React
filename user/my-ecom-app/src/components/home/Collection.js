@@ -3,19 +3,22 @@ import {Card, Col, Container, Row} from "react-bootstrap";
 import axios from "axios";
 import ApiURL from "../../api/ApiURL";
 import {Link} from "react-router-dom";
+import SpecialCollectionPlaceholder from "../../placeholder/SpecialCollectionPlaceholder";
 
 class Collection extends Component {
 
     constructor() {
         super();
         this.state = {
-            ProductData:[]
+            ProductData:[],
+            isLoading:"TopSection",
+            MainDiv:"d-none"
         }
     }
 
     componentDidMount() {
         axios.get(ApiURL.ProductListByRemark("Collection")).then(res=>{
-            this.setState({ProductData:res.data});
+            this.setState({ProductData:res.data, isLoading:"d-none", MainDiv:" "});
         }).catch(err=>{
 
         })
@@ -59,13 +62,18 @@ class Collection extends Component {
 
         return (
             <Fragment>
-                <Container className="text-center card py-5" fluid={true}>
-                    <h5 className="section-title">SPECIAL COLLECTION</h5>
-                    <p className="section-sub-title pb-3">Some Of Our Exclusive Collection, You May Like</p>
-                    <Row>
-                        {MyView}
-                    </Row>
-                </Container>
+
+                <SpecialCollectionPlaceholder isLoading={this.state.isLoading}/>
+
+                <div className={this.state.MainDiv}>
+                    <Container className="text-center card py-5" fluid={true}>
+                        <h5 className="section-title">SPECIAL COLLECTION</h5>
+                        <p className="section-sub-title pb-3">Some Of Our Exclusive Collection, You May Like</p>
+                        <Row>
+                            {MyView}
+                        </Row>
+                    </Container>
+                </div>
             </Fragment>
         );
     }

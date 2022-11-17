@@ -13,7 +13,7 @@ class HomeTop extends Component {
         this.state = {
             MenuData:[],
             SliderData:[],
-            isLoading:"",
+            isLoading:"TopSection",
             MainDiv:"d-none"
         }
     }
