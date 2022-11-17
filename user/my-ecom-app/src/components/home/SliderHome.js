@@ -20,7 +20,7 @@ class SliderHome extends Component {
 
             return <div  className="container-fluid m-0 p-0 overflow-hidden w-100 shadow-sm">
                 <div style={{backgroundColor:SliderList.bg_color}} className="m-0 p-0">
-                    <div className="row card-body pt-3">
+                    <div className="row card-body pt-5">
                         <div className="col-md-6 slider-title-div animated slideInDown text-center">
                             <h1 style={{color:SliderList.text_color}} className="slider-title">{SliderList.title}</h1>
                             <h1 style={{color:SliderList.text_color}} className="slider-sub-title">

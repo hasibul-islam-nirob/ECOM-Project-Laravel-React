@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import image from '../../assets/images/sliderimage.svg'
+import image from '../assets/images/sliderimage.svg'
 import {Col, Container, Row} from "react-bootstrap";
 class SliderLoader extends Component {
     render() {

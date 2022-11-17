@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9836cb16-56b1-49f4-91f6-23b0bbc3cb14" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/bigSlider.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/bigSlider.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/HomeTop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/HomeTop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/home/HomeTopMobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/HomeTopMobile.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/home/SliderHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/home/SliderHome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/placeholder/SliderLoader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/placeholder/SliderLoader.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/placeholder/SliderLoaderMobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/placeholder/SliderLoaderMobile.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +51,7 @@
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -106,7 +110,7 @@
       <workItem from="1666992056964" duration="18000" />
       <workItem from="1667664748942" duration="209000" />
       <workItem from="1668623243799" duration="1724000" />
-      <workItem from="1668668386520" duration="7181000" />
+      <workItem from="1668668386520" duration="9179000" />
     </task>
     <servers />
   </component>

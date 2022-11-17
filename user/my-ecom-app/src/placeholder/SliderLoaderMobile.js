@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import image from '../../assets/images/sliderimagemobile.svg'
+import image from '../assets/images/sliderimagemobile.svg'
 import {Col, Container, Row} from "react-bootstrap";
 class SliderLoaderMobile extends Component {
     render() {

@@ -3,12 +3,15 @@ import {Col, Container, Row} from "react-bootstrap";
 import SliderHome from "./SliderHome";
 import axios from "axios";
 import ApiURL from "../../api/ApiURL";
+import SliderLoaderMobile from "../../placeholder/SliderLoaderMobile";
 
 class HomeTopMobile extends Component {
     constructor() {
         super();
         this.state = {
-            SliderData:[]
+            SliderData:[],
+            isLoading:"",
+            MainDiv:"d-none"
         }
     }
 
@@ -16,7 +19,7 @@ class HomeTopMobile extends Component {
 
         // slider info
         axios.get(ApiURL.sliderInfo).then(res=>{
-            this.setState({SliderData:res.data});
+            this.setState({SliderData:res.data, isLoading:"d-none", MainDiv:" "});
         }).catch(err=>{
 
         })
@@ -25,14 +28,19 @@ class HomeTopMobile extends Component {
     render() {
         return (
             <Fragment>
-                <Container className="p-0 m-0 overflow-hidden" fluid={true}>
-                    <Row className="p-0 m-0 overflow-hidden">
-                        <Col className="p-0 m-0 overflow-hidden" lg={12} md={12} sm={12}>
-                            <SliderHome data={this.state.SliderData}/>
-                        </Col>
 
-                    </Row>
-                </Container>
+                <SliderLoaderMobile isLoading={this.state.isLoading} />
+
+                <div className={this.state.MainDiv}>
+                    <Container className="p-0 m-0 overflow-hidden" fluid={true}>
+                        <Row className="p-0 m-0 overflow-hidden">
+                            <Col className="p-0 m-0 overflow-hidden" lg={12} md={12} sm={12}>
+                                <SliderHome data={this.state.SliderData}/>
+                            </Col>
+
+                        </Row>
+                    </Container>
+                </div>
             </Fragment>
         );
     }
