@@ -19,11 +19,11 @@ class SliderHome extends Component {
         const SliderView = SliderData.map((SliderList, i)=>{
 
             return <div  className="container-fluid m-0 p-0 overflow-hidden w-100 shadow-sm">
-                <div  className="m-0 p-0">
-                    <div className="row card-body">
+                <div style={{backgroundColor:SliderList.bg_color}} className="m-0 p-0">
+                    <div className="row card-body pt-3">
                         <div className="col-md-6 slider-title-div animated slideInDown text-center">
-                            <h1 className="slider-title">{SliderList.title}</h1>
-                            <h1 className="slider-sub-title">
+                            <h1 style={{color:SliderList.text_color}} className="slider-title">{SliderList.title}</h1>
+                            <h1 style={{color:SliderList.text_color}} className="slider-sub-title">
                                 {SliderList.sub_title}
                             </h1>
                             <a href="" className="btn site-btn px-5">More Info</a>
