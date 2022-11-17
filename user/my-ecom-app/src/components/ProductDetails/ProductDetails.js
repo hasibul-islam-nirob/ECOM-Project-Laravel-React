@@ -1,9 +1,6 @@
 import React, {Component, Fragment} from 'react';
 import {Breadcrumb, Col, Container, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
-import SuggestedProducts from "./SuggestedProducts";
-
-import productBigImg from "../../assets/images/login/loginImg.webp";
 
 class ProductDetails extends Component {
 
@@ -27,6 +24,16 @@ class ProductDetails extends Component {
     }
 
     render() {
+
+        let ProductData = this.props.ProductData;
+        let title = ProductData['ProductList'][0]['title'];
+        let productBigImg = ProductData['ProductList'][0]['image'];
+        let des = ProductData['ProductDetails'][0]['des'];
+        let img1 = ProductData['ProductDetails'][0]['img1'];
+        let img2 = ProductData['ProductDetails'][0]['img2'];
+        let img3 = ProductData['ProductDetails'][0]['img3'];
+        let img4 = ProductData['ProductDetails'][0]['img4'];
+
         return (
             <Fragment>
                 <Container fluid={true}  className="TopSection  animated slideInDown">
@@ -36,32 +43,32 @@ class ProductDetails extends Component {
                             <Breadcrumb.Item> <Link to="/productDetails">Details</Link></Breadcrumb.Item>
                         </Breadcrumb>
                     </Row>
-                    <Row className="p-1">
-                        <Col  md={12} lg={12} sm={12} xs={12}>
-                            <Row className=" shadow-sm  bg-white">
+                    <Row className="p-2">
+                        <Col  className="shadow-sm  bg-white pb-3 mt-4" md={12} lg={12} sm={12} xs={12}>
+                            <Row>
                                 <Col className="p-3 animated " md={6} lg={6} sm={12} xs={12}>
 
-                                    <img src={productBigImg} width={600} height={350} alt=""/>
+                                    <img className="w-100" src={productBigImg}  alt=""/>
                                     <Container className="my-3">
                                         <Row>
-                                            <Col className="p-0 image-box m-0"  md={3} lg={3} sm={3} xs={3}>
-                                                <img className="w-100 Product-sm-img" src="" alt=""/>
+                                            <Col className="p-1 image-box m-0"  md={3} lg={3} sm={3} xs={3}>
+                                                <img className="w-100 Product-sm-img" src={img1} alt=""/>
                                             </Col>
-                                            <Col className="p-0 image-box m-0" md={3} lg={3} sm={3} xs={3}>
-                                                <img className="w-100 Product-sm-img" src="" alt=""/>
+                                            <Col className="p-1 image-box m-0" md={3} lg={3} sm={3} xs={3}>
+                                                <img className="w-100 Product-sm-img" src={img1} alt=""/>
                                             </Col>
-                                            <Col className="p-0 image-box m-0" md={3} lg={3} sm={3} xs={3}>
-                                                <img className="w-100 Product-sm-img" src="" alt=""/>
+                                            <Col className="p-1 image-box m-0" md={3} lg={3} sm={3} xs={3}>
+                                                <img className="w-100 Product-sm-img" src={img1} alt=""/>
                                             </Col>
-                                            <Col className="p-0 image-box m-0" md={3} lg={3} sm={3} xs={3}>
-                                                <img className="w-100 Product-sm-img" src="" alt=""/>
+                                            <Col className="p-1 image-box m-0" md={3} lg={3} sm={3} xs={3}>
+                                                <img className="w-100 Product-sm-img" src={img1} alt=""/>
                                             </Col>
                                         </Row>
                                     </Container>
                                 </Col>
                                 <Col className="p-3 " md={6} lg={6} sm={12} xs={12}>
-                                    <h5 className="Product-Name">Title</h5>
-                                    <h6 className="section-sub-title">  Desc</h6>
+                                    <h5 className="Product-Name">{title}</h5>
+                                    <h6 className="section-sub-title">{des}</h6>
                                     <h5>Price: 150$</h5>
 
                                     <div className="">
@@ -121,7 +128,6 @@ class ProductDetails extends Component {
                     </Row>
                 </Container>
 
-                <SuggestedProducts/>
 
             </Fragment>
         );

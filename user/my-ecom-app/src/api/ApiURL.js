@@ -23,5 +23,9 @@ class ApiURL{
 
     static sliderInfo = this.BaseURL+"sliderInfo";
 
+    static ProductDetails(productCode){
+        return this.BaseURL+"productDetails/"+productCode;
+    }
+
 }
 export default ApiURL;

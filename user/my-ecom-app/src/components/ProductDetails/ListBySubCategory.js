@@ -12,7 +12,7 @@ class ListBySubCategory extends Component {
         const MyView = MyList.map((ProductList,i)=>{
             if(ProductList.special_price==="NA"){
                 return <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6} >
-                    <Link to={"productDetails/"+ProductList.product_code}>
+                    <Link to={"/productDetails/"+ProductList.product_code}>
                         <Card className="card h-100 w-100  image-box ">
                             <img src={ProductList.image} alt=""/>
                             <Card.Body>
@@ -26,7 +26,7 @@ class ListBySubCategory extends Component {
             else{
 
                 return <Col className="p-1" key={1} xl={2} lg={2} md={2} sm={4} xs={6} >
-                    <Link to={"productDetails/"+ProductList.product_code}>
+                    <Link to={"/productDetails/"+ProductList.product_code}>
                         <Card className="card h-100 w-100  image-box ">
                             <img src={ProductList.image} alt=""/>
                             <Card.Body>
