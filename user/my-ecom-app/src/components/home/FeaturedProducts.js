@@ -11,7 +11,7 @@ class FeaturedProducts extends Component {
         super();
         this.state = {
             ProductData:[],
-            isLoading:"TopSection",
+            isLoading:"BetweenTwoSection",
             MainDiv:"d-none"
         }
     }

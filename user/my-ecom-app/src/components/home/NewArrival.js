@@ -15,7 +15,7 @@ class NewArrival extends Component {
         super();
         this.state = {
             ProductData:[],
-            isLoading:"TopSection",
+            isLoading:"BetweenTwoSection",
             MainDiv:"d-none"
         }
         this.next = this.next.bind(this);
@@ -127,7 +127,6 @@ class NewArrival extends Component {
                         <Slider ref={ c=>(this.slider=c) } {...settings}>
                             {MyView}
                         </Slider>
-
                     </Container>
                 </div>
             </Fragment>

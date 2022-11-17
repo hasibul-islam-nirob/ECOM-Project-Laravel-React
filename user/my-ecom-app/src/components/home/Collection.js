@@ -11,7 +11,7 @@ class Collection extends Component {
         super();
         this.state = {
             ProductData:[],
-            isLoading:"TopSection",
+            isLoading:"BetweenTwoSection",
             MainDiv:"d-none"
         }
     }
@@ -66,13 +66,13 @@ class Collection extends Component {
                 <SpecialCollectionPlaceholder isLoading={this.state.isLoading}/>
 
                 <div className={this.state.MainDiv}>
-                    <Container className="text-center card py-5" fluid={true}>
-                        <h5 className="section-title">SPECIAL COLLECTION</h5>
-                        <p className="section-sub-title pb-3">Some Of Our Exclusive Collection, You May Like</p>
+                <Container className="text-center card py-5" fluid={true}>
+                    <h5 className="section-title">SPECIAL COLLECTION</h5>
+                    <p className="section-sub-title pb-3">Some Of Our Exclusive Collection, You May Like</p>
                         <Row>
                             {MyView}
                         </Row>
-                    </Container>
+                </Container>
                 </div>
             </Fragment>
         );

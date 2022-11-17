@@ -11,7 +11,7 @@ class Categories extends Component {
         super();
         this.state = {
             MenuData:[],
-            isLoading:"TopSection",
+            isLoading:"BetweenTwoSection",
             MainDiv:"d-none"
         }
     }
@@ -46,13 +46,13 @@ class Categories extends Component {
                 <CategoryPlaceholder isLoading={this.state.isLoading}/>
 
                 <div className={this.state.MainDiv}>
-                    <Container className="text-center py-5" fluid={true}>
-                        <h5 className="section-title">CATEGORIES</h5>
-                        <p className="section-sub-title pb-3">Some Of Our Exclusive Collection, You May Like</p>
+                <Container className="text-center mx-1 py-5" fluid={true}>
+                    <h5 className="section-title">CATEGORIES</h5>
+                    <p className="section-sub-title pb-3">Some Of Our Exclusive Collection, You May Like</p>
                         <Row>
                             {MyView}
                         </Row>
-                    </Container>
+                </Container>
                 </div>
             </Fragment>
         );
