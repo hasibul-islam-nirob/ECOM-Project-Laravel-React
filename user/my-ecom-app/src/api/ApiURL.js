@@ -15,8 +15,8 @@ class ApiURL{
         return this.BaseURL+"ProductListByCategory/"+Category;
     }
 
-    static ProductListBySubCategory(SubCategory){
-        return this.BaseURL+"ProductListBySubCategoryPage/"+SubCategory;
+    static ProductListBySubCategory(Category,SubCategory){
+        return this.BaseURL+"ProductListBySubCategory/"+Category+"/"+SubCategory;
     }
 
 }
