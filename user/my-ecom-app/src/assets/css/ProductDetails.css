@@ -19,6 +19,7 @@
 
 .Product-sm-img{
     cursor:pointer;
+    height: 75px !important;
 }
 .Product-sm-img:hover{
     cursor:pointer;

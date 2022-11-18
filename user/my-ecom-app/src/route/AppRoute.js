@@ -21,6 +21,10 @@ class AppRoute extends Component {
             <Fragment>
                 <Switch>
                     <Route exact path="/" component={HomePage} />
+
+                    <Route exact path="/" render={(props)=> <HomePage/>} component={HomePage} />
+
+
                     <Route exact path="/onboard" component={UserOnBoardPage} />
                     <Route exact path="/contact" component={ContactPage} />
                     <Route exact path="/about" component={AboutPage} />

@@ -115,16 +115,16 @@ class ProductDetails extends Component {
                                     <Container className="my-3">
                                         <Row>
                                             <Col className="p-1 image-box m-0"  md={3} lg={3} sm={3} xs={3}>
-                                                <img onClick={this.imgOnClick} className="w-100 Product-sm-img" src={img1} alt=""/>
+                                                <img onClick={this.imgOnClick} className="w-100 Product-sm-img" src={img1} height="75px" alt=""/>
                                             </Col>
                                             <Col className="p-1 image-box m-0" md={3} lg={3} sm={3} xs={3}>
-                                                <img onClick={this.imgOnClick} className="w-100 Product-sm-img" src={img2} alt=""/>
+                                                <img onClick={this.imgOnClick} className="w-100 Product-sm-img" src={img2} height="75px" alt=""/>
                                             </Col>
                                             <Col className="p-1 image-box m-0" md={3} lg={3} sm={3} xs={3}>
-                                                <img onClick={this.imgOnClick} className="w-100 Product-sm-img" src={img3} alt=""/>
+                                                <img onClick={this.imgOnClick} className="w-100 Product-sm-img" src={img3} height="75px" alt=""/>
                                             </Col>
                                             <Col className="p-1 image-box m-0" md={3} lg={3} sm={3} xs={3}>
-                                                <img onClick={this.imgOnClick} className="w-100 Product-sm-img" src={img4} alt=""/>
+                                                <img onClick={this.imgOnClick} className="w-100 Product-sm-img" src={img4} height="75px" alt=""/>
                                             </Col>
                                         </Row>
                                     </Container>

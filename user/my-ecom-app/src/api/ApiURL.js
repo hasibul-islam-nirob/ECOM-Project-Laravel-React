@@ -7,25 +7,20 @@ class ApiURL{
     static sendContactDetails = this.BaseURL+"sendContactDetails";
     static sendSiteInfo = this.BaseURL+"sendSiteInfo";
     static sendCategoryDetails = this.BaseURL+"sendCategoryDetails";
-
-
     static ProductListByRemark(Remark){
         return this.BaseURL+"ProductListByRemark/"+Remark;
     }
-
     static ProductListByCategory(Category){
         return this.BaseURL+"ProductListByCategory/"+Category;
     }
-
     static ProductListBySubCategory(Category,SubCategory){
         return this.BaseURL+"ProductListBySubCategory/"+Category+"/"+SubCategory;
     }
-
     static sliderInfo = this.BaseURL+"sliderInfo";
-
     static ProductDetails(productCode){
         return this.BaseURL+"productDetails/"+productCode;
     }
+    static NotificationHistory = this.BaseURL+"NotificationHistory";
 
 }
 export default ApiURL;
