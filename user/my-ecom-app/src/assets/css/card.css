@@ -19,6 +19,7 @@
 }
 .image-box img {
     width: 100% !important;
+    height: 75px !important;
     transition: all 0.3s;
     display: block;
     height: auto;
