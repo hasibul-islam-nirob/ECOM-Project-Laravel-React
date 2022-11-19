@@ -14,6 +14,7 @@ import FavouritePage from "../pages/FavouritePage";
 import CartPage from "../pages/CartPage";
 import ProductListByCategoryPage from "../pages/ProductListByCategoryPage";
 import ProductListBySubCategoryPage from "../pages/ProductListBySubCategoryPage";
+import SearchPage from "../pages/SearchPage";
 
 class AppRoute extends Component {
     render() {
@@ -34,6 +35,7 @@ class AppRoute extends Component {
                     <Route exact path="/cartList" render={(props)=> <CartPage {...props} key={Date.now()} />} />
                     <Route exact path="/ProductListByCategory/:Category" render={(props)=> <ProductListByCategoryPage {...props} key={Date.now()} />} />
                     <Route exact path="/ProductListBySubCategory/:Category/:SubCategory" render={(props)=> <ProductListBySubCategoryPage {...props} key={Date.now()} />} />
+                    <Route exact path="/ProductListBySearch/:SearchKey" render={(props)=> <SearchPage {...props} key={Date.now()} />} />
                 </Switch>
             </Fragment>
         );

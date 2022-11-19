@@ -2,9 +2,43 @@ import React, {Component, Fragment} from 'react';
 import {Col, Container, Navbar, Row, Button} from "react-bootstrap";
 import logo from '../../assets/images/475.png';
 import {Link} from "react-router-dom";
+import {Redirect} from "react-router";
 
 
 class NavMenuDesktop extends Component {
+
+    constructor() {
+        super();
+        this.state={
+            SearchKey:"",
+            SearchRedirectStatus: false,
+            afterLoginDiv:"d-none",
+            RedirectHome:false,
+            cartCount:0
+        }
+
+        this.SearchOnChange=this.SearchOnChange.bind(this);
+        this.SearchOnClick=this.SearchOnClick.bind(this);
+        this.searchRedirect=this.searchRedirect.bind(this);
+    }
+
+    SearchOnChange(event){
+        let SearchKey=  event.target.value;
+        this.setState({SearchKey:SearchKey});
+    }
+
+    SearchOnClick(){
+        if(this.state.SearchKey.length>=3){
+            this.setState({SearchRedirectStatus:true})
+        }
+    }
+
+    searchRedirect(){
+        if(this.state.SearchRedirectStatus===true){
+            return <Redirect to={"/ProductListBySearch/"+this.state.SearchKey} />
+        }
+    }
+
     render() {
         return (
             <Fragment>
@@ -17,8 +51,8 @@ class NavMenuDesktop extends Component {
 
                         <Col lg={4} md={4} sm={12} xs={12}>
                             <div className="input-group w-100">
-                                <input type="text" className="form-control" />
-                                <Button type="button" className="btn site-btn"><i className="fa fa-search"></i></Button>
+                                <input onChange={this.SearchOnChange} type="text" className="form-control" />
+                                <Button onClick={this.SearchOnClick} type="button" className="btn site-btn"><i className="fa fa-search"></i></Button>
                             </div>
                         </Col>
 
@@ -29,7 +63,9 @@ class NavMenuDesktop extends Component {
                             <Link to="/onboard" href="" className="h4 btn">Login</Link>
                         </Col>
                     </Row>
+                    {this.searchRedirect()}
                 </Container>
+
             </Fragment>
         );
     }

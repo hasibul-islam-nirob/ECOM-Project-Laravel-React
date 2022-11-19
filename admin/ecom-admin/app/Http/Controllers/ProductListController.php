@@ -26,6 +26,11 @@ class ProductListController extends Controller
         return $result;
     }
 
+    function ProductBySearch(Request $request){
+        $key = $request->key;
+        return $result = ProductListModel::where('title','LIKE',"%{$key}%")->get();
+    }
+
 
 
 

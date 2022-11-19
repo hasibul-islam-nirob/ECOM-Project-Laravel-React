@@ -19,6 +19,7 @@ Route::get('/sendCategoryDetails', [CategoryDetailsController::class, 'sendCateg
 Route::get('/ProductListByRemark/{remark}', [ProductListController::class, 'getProductListByRemark']);
 Route::get('/ProductListByCategory/{Category}', [ProductListController::class, 'getProductListByCategory']);
 Route::get('/ProductListBySubCategory/{Category}/{subCategory}', [ProductListController::class, 'getProductListBySubCategory']);
+Route::get('/ProductBySearch/{key}', [ProductListController::class, 'ProductBySearch']);
 
 Route::get('/sliderInfo', [SliderController::class, 'SliderInfo']);
 

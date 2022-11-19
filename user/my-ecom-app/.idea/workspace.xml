@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9836cb16-56b1-49f4-91f6-23b0bbc3cb14" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/pages/SearchPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../admin/ecom-admin/app/Http/Controllers/ProductListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../admin/ecom-admin/app/Http/Controllers/ProductListController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../admin/ecom-admin/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../admin/ecom-admin/routes/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/NavMenuDesktop.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/NavMenuDesktop.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/route/AppRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/route/AppRoute.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +34,9 @@
     </file-type-list>
   </component>
   <component name="ProjectId" id="2C1XfqTHNs7izgN12KdM2br5iSC" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -105,11 +112,22 @@
       <workItem from="1666992056964" duration="18000" />
       <workItem from="1667664748942" duration="209000" />
       <workItem from="1668623243799" duration="1724000" />
-      <workItem from="1668668386520" duration="28634000" />
+      <workItem from="1668668386520" duration="29869000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
