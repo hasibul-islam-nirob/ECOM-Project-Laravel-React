@@ -22,5 +22,9 @@ class ApiURL{
     }
     static NotificationHistory = this.BaseURL+"NotificationHistory";
 
+    static ProductBySearch(SearchKey){
+        return this.BaseURL+"ProductBySearch/"+SearchKey;
+    }
+
 }
 export default ApiURL;
