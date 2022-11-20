@@ -42,7 +42,7 @@ class SearchPage extends Component {
 
                 <ProductListLoader isLoading={this.state.isLoading}/>
                 <div className={this.state.MainDiv}>
-                    <SearchList  ProductData={this.state.ProductData}/>
+                    <SearchList SearchKey={this.state.SearchKey}  ProductData={this.state.ProductData}/>
                 </div>
 
                 <div className="Desktop">
