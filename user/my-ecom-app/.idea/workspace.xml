@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9836cb16-56b1-49f4-91f6-23b0bbc3cb14" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../admin/ecom-admin/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/../../admin/ecom-admin/app/Http/Controllers/LoginController.php" afterDir="false" />
-    </list>
+    <list default="true" id="9836cb16-56b1-49f4-91f6-23b0bbc3cb14" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +107,7 @@
       <workItem from="1668623243799" duration="1724000" />
       <workItem from="1668668386520" duration="31717000" />
       <workItem from="1669051962591" duration="1508000" />
-      <workItem from="1669325524562" duration="777000" />
+      <workItem from="1669325524562" duration="844000" />
     </task>
     <servers />
   </component>
