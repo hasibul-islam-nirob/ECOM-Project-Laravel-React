@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryDetailsController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\ProductDetailsController;
 use App\Http\Controllers\ProductListController;
@@ -26,3 +27,5 @@ Route::get('/sliderInfo', [SliderController::class, 'SliderInfo']);
 Route::get('/productDetails/{product_code}', [ProductDetailsController::class, 'ProductDetails']);
 
 Route::get('/NotificationHistory', [NotificationController::class, 'NotificationHistory']);
+
+Route::post('/CreateOTP', [LoginController::class, 'CreateOTP']);
