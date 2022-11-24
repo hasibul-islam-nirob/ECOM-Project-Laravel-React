@@ -21,9 +21,6 @@ class LoginController extends Controller
         $token = $apiToken;
         $message = "Welcome to FCZ, আপনার লগইন কোডটি হলো : ".$optCode;
 
-        //$url = "http://api.greenweb.com.bd/api.php?json";
-
-
         $data= array(
             'to'=>"$to",
             'message'=>"$message",
@@ -37,7 +34,12 @@ class LoginController extends Controller
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         $smsresult = curl_exec($ch);
+        curl_close($ch);
+        $otpResult = json_decode($smsresult, true);
 
+        if ($otpResult[0]['status'] == "SEND"){
+            return 1;
+        }
 
 
     }
