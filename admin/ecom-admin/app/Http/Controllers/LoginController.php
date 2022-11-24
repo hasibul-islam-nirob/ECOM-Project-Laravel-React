@@ -18,8 +18,8 @@ class LoginController extends Controller
         $randomTime = time();
         $otpCode = mt_rand(100000, 999999);
 
-        $to = "01312110002";
-        $token = $apiToken;
+        $to = $mobile;
+        $token = "fdfeerere";//$apiToken;
         $message = "Welcome to FCZ, আপনার লগইন কোডটি হলো : ".$otpCode;
 
         $data= array(
@@ -38,7 +38,7 @@ class LoginController extends Controller
         curl_close($ch);
         $otpResult = json_decode($smsresult, true);
 
-        if ($otpResult[0]['status'] == "SEND"){
+        if ($otpResult[0]['status'] == "SENT"){
             $created_timestamp = time();
             $time = date('h:i:sa');
             $date = date('d-m-Y');
@@ -57,6 +57,8 @@ class LoginController extends Controller
                 return 0;
             }
 
+        }else{
+            return 0;
         }
 
 
