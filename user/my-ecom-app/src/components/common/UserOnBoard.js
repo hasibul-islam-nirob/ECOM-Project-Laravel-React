@@ -4,10 +4,12 @@ import validation from '../../velidation/Validation'
 import {Redirect} from "react-router";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from "axios";
+import ApiURL from "../../api/ApiURL";
 
 
 class UserOnBoard extends Component {
-    constructor() {
+    constructor(match) {
         super();
         this.state={
             btn:"Next",
@@ -16,6 +18,13 @@ class UserOnBoard extends Component {
         }
         this.MobileOnChange=this.MobileOnChange.bind(this);
         this.onNextClick=this.onNextClick.bind(this);
+        this.onUserRedirect=this.onUserRedirect.bind(this);
+    }
+
+    onUserRedirect(){
+        if(this.state.UserRedirect == true){
+            return <Redirect to={"/OtpVerification"} />
+        }
     }
 
     MobileOnChange(event){
@@ -28,12 +37,26 @@ class UserOnBoard extends Component {
         let mobile= this.state.MobileNo;
         if(mobile.length===0){
             toast.error('Mobile Number Required', {position: "bottom-center"});
-        }
-        else if(!(validation.mobileRegx).test(mobile)){
+
+        } else if(!(validation.mobileRegx).test(mobile)){
             toast.error("Invalid Mobile Number",{position:'bottom-center'});
-        }
-        else {
-            alert(mobile)
+
+        } else {
+            this.setState({UserRedirect:true});
+
+            this.setState({btn:"Processing.."});
+            axios.get(ApiURL.CreateOTP(mobile)).then(res=>{
+                this.setState({btn:"Next"});
+                if (res.status==200 && res.data==1){
+                    toast.error("Verification code has been sent",{position:'bottom-center'});
+                    this.setState({UserRedirect:true});
+                }else{
+                    toast.error("Request Fail ! Try Again",{position:'bottom-center'});
+                }
+            }).catch(err=>{
+                this.setState({btn:"Next"});
+                toast.error("Request Fail ! Try Again",{position:'bottom-center'});
+            })
         }
     }
 
@@ -72,6 +95,7 @@ class UserOnBoard extends Component {
                     //theme="light"
                     theme="colored"
                 />
+                {this.onUserRedirect()}
             </Fragment>
         );
     }

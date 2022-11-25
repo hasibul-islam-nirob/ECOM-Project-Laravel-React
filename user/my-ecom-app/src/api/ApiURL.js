@@ -26,5 +26,9 @@ class ApiURL{
         return this.BaseURL+"ProductBySearch/"+SearchKey;
     }
 
+    static CreateOTP(Mobile){
+        return this.BaseURL+"CreateOTP5/"+Mobile;
+    }
+
 }
 export default ApiURL;
