@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {Col, Container, Row} from "react-bootstrap";
-import {ToastContainer} from "react-toastify";
+import {toast, ToastContainer} from "react-toastify";
+import ApiURL from "../../api/ApiURL";
 
 class OtpVerification extends Component {
 
@@ -26,6 +27,21 @@ class OtpVerification extends Component {
 
     }
 
+    onNextClick(){
+        let OtpValue=  this.state.OtpNo;
+        let mobileNo=  this.state.mobileNo;
+        if(OtpValue.length!==6){
+            toast.error("Invalid Verification Code",{position:'bottom-center'});
+        }
+        else{
+            //let URL=ApiURL.OtpVerification;
+            //let MyFormData=new FormData();
+            //MyFormData.append('OTP',OtpValue);
+            //MyFormData.append('mobileNo',mobileNo);
+
+        }
+    }
+
     render() {
         return (
 
@@ -39,7 +55,7 @@ class OtpVerification extends Component {
                                         <h4 className="section-title">Verification Code</h4>
                                         <h6 className="section-sub-title">Please Enter 6 Digit Verification Code</h6>
                                         <input onChange={this.OtpOnChange} className="form-control m-2" type="text" placeholder="xxxxxx"/>
-                                        <button onClick='' className="btn btn-block m-2 site-btn">{this.state.btn}</button>
+                                        <button onClick={this.onNextClick} className="btn btn-block w-100 m-2 site-btn">{this.state.btn}</button>
                                     </div>
                                 </Col>
 
