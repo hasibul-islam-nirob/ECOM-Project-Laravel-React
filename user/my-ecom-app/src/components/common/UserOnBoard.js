@@ -2,6 +2,16 @@ import React, {Component, Fragment} from 'react';
 import {Card, Col, Container, Form, Row} from "react-bootstrap";
 
 class UserOnBoard extends Component {
+    constructor() {
+        super();
+        this.state={
+            btn:"Next",
+            MobileNo:"",
+            UserRedirect:false
+        }
+        
+    }
+
     render() {
         return (
             <Fragment>
