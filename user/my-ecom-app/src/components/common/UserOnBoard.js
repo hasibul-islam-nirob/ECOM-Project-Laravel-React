@@ -42,8 +42,6 @@ class UserOnBoard extends Component {
             toast.error("Invalid Mobile Number",{position:'bottom-center'});
 
         } else {
-            this.setState({UserRedirect:true});
-
             this.setState({btn:"Processing.."});
             axios.get(ApiURL.CreateOTP(mobile)).then(res=>{
                 this.setState({btn:"Next"});

@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9836cb16-56b1-49f4-91f6-23b0bbc3cb14" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/OtpVerification.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/OtpVerification.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +111,7 @@
       <workItem from="1669051962591" duration="1508000" />
       <workItem from="1669325524562" duration="844000" />
       <workItem from="1669397711177" duration="8987000" />
+      <workItem from="1669535158039" duration="749000" />
     </task>
     <servers />
   </component>
