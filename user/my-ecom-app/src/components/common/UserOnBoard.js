@@ -22,7 +22,7 @@ class UserOnBoard extends Component {
     }
 
     onUserRedirect(){
-        if(this.state.UserRedirect == true){
+        if(this.state.UserRedirect === true){
             return <Redirect to={"/OtpVerification/"+this.state.MobileNo} />
         }
     }

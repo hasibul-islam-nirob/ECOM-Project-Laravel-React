@@ -4,6 +4,7 @@ import {toast, ToastContainer} from "react-toastify";
 import ApiURL from "../../api/ApiURL";
 import axios from "axios";
 import {Redirect} from "react-router";
+import SessionHelper from "../../SessionHelper/SessionHelper";
 
 class OtpVerification extends Component {
 
@@ -31,7 +32,16 @@ class OtpVerification extends Component {
     }
 
     onUserRedirect(){
-        return(<Redirect to="/"/>)
+        if(this.state.UserRedirect===true){
+            let winPath=SessionHelper.GetRedirectFromDetails()
+            if(winPath===null){
+                return(<Redirect to="/"/>)
+            }
+            else {
+                return(<Redirect to={winPath}/>)
+            }
+
+        }
     }
 
     onNextClick(){
@@ -54,6 +64,7 @@ class OtpVerification extends Component {
             }).then(res=>{
                 this.setState({btn:"Login"});
                 if (res.data==1){
+                    SessionHelper.setUserMobile(mobileNo);
                     toast.success("Verification Success",{position:'bottom-center'});
                     this.setState({UserRedirect:true});
                 }else{
@@ -86,8 +97,6 @@ class OtpVerification extends Component {
                             </Row>
                         </Col>
                     </Row>
-
-                    <h1>{this.state.mobileNo}</h1>
                 </Container>
 
                 <ToastContainer

@@ -37,7 +37,23 @@ class SessionHelper{
         return sessionStorage.getItem("siteRefundInfo");
     }
 //===================================
+    static setUserMobile(UserMobile){
+        sessionStorage.setItem("UserMobile", UserMobile);
+    }
+    static getUserMobile(){
+        return sessionStorage.getItem("UserMobile");
+    }
+    static removeUserMobile(){
+        return sessionStorage.removeItem("UserMobile");
+    }
 
+    static SetRedirectFromDetails(winlocation){
+        sessionStorage.setItem("winlocation",winlocation)
+    }
+
+    static GetRedirectFromDetails(){
+        return sessionStorage.getItem("winlocation");
+    }
 
 
 }
