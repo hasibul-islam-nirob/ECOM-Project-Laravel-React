@@ -19,7 +19,7 @@ class LoginController extends Controller
         $otpCode = mt_rand(100000, 999999);
 
         $to = $mobile;
-        $token = "fdfeerere";//$apiToken;
+        $token = $apiToken;
         $message = "Welcome to FCZ, আপনার লগইন কোডটি হলো : ".$otpCode;
 
         $data= array(
@@ -60,7 +60,20 @@ class LoginController extends Controller
         }else{
             return 0;
         }
-
-
     }
+
+
+    function OTPVerification(Request $request){
+        $otpCode = $request->input('otp');
+        $mobileNo = $request->input('mobile');
+        $countNo = OTPModel::where('otp',$otpCode)->where('mobile',$mobileNo)->count();
+        if ($countNo > 0){
+            return 1;
+        }else{
+            return 0;
+        }
+    }
+
+
+
 }

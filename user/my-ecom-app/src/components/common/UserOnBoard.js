@@ -23,7 +23,7 @@ class UserOnBoard extends Component {
 
     onUserRedirect(){
         if(this.state.UserRedirect == true){
-            return <Redirect to={"/OtpVerification"} />
+            return <Redirect to={"/OtpVerification/"+this.state.MobileNo} />
         }
     }
 
@@ -43,10 +43,12 @@ class UserOnBoard extends Component {
 
         } else {
             this.setState({btn:"Processing.."});
-            axios.get(ApiURL.CreateOTP(mobile)).then(res=>{
+
+            let URL=ApiURL.CreateOTP;
+            axios.post(URL,{mobile:mobile}).then(res=>{
                 this.setState({btn:"Next"});
                 if (res.status==200 && res.data==1){
-                    toast.error("Verification code has been sent",{position:'bottom-center'});
+                    toast.success("Verification code has been sent",{position:'bottom-center'});
                     this.setState({UserRedirect:true});
                 }else{
                     toast.error("Request Fail ! Try Again",{position:'bottom-center'});

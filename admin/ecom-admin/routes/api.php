@@ -29,3 +29,4 @@ Route::get('/productDetails/{product_code}', [ProductDetailsController::class, '
 Route::get('/NotificationHistory', [NotificationController::class, 'NotificationHistory']);
 
 Route::post('/CreateOTP', [LoginController::class, 'CreateOTP']);
+Route::post('/OTPVerification', [LoginController::class, 'OTPVerification']);

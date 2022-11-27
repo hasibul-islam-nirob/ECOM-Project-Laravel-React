@@ -37,7 +37,7 @@ class AppRoute extends Component {
                     <Route exact path="/ProductListByCategory/:Category" render={(props)=> <ProductListByCategoryPage {...props} key={Date.now()} />} />
                     <Route exact path="/ProductListBySubCategory/:Category/:SubCategory" render={(props)=> <ProductListBySubCategoryPage {...props} key={Date.now()} />} />
                     <Route exact path="/ProductListBySearch/:SearchKey" render={(props)=> <SearchPage {...props} key={Date.now()} />} />
-                    <Route exact path="/OtpVerification" render={(props)=> <OtpVerificationPage {...props} key={Date.now()} />} />
+                    <Route exact path="/OtpVerification/:MobileNo" render={(props)=> <OtpVerificationPage {...props} key={Date.now()} />} />
                     {/*<Route exact path="/OtpVerification/:MobileNo" render={(props)=> <OtpVerificationPage {...props} key={Date.now()} />} />*/}
 
                 </Switch>

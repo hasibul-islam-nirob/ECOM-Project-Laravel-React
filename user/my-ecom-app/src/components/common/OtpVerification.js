@@ -2,6 +2,8 @@ import React, {Component, Fragment} from 'react';
 import {Col, Container, Row} from "react-bootstrap";
 import {toast, ToastContainer} from "react-toastify";
 import ApiURL from "../../api/ApiURL";
+import axios from "axios";
+import {Redirect} from "react-router";
 
 class OtpVerification extends Component {
 
@@ -23,8 +25,13 @@ class OtpVerification extends Component {
         this.setState({OtpNo:OtpValue})
     }
 
-    onUserRedirect(){
+    componentDidMount() {
+        let MobileNo = this.props.MobileNo;
+        this.setState({mobileNo:MobileNo})
+    }
 
+    onUserRedirect(){
+        return(<Redirect to="/"/>)
     }
 
     onNextClick(){
@@ -34,17 +41,34 @@ class OtpVerification extends Component {
             toast.error("Invalid Verification Code",{position:'bottom-center'});
         }
         else{
-            //let URL=ApiURL.OtpVerification;
-            //let MyFormData=new FormData();
-            //MyFormData.append('OTP',OtpValue);
-            //MyFormData.append('mobileNo',mobileNo);
+            this.setState({btn:"Processing.."});
+
+            let URL=ApiURL.OTPVerification;
+            let MyFormData=new FormData();
+            MyFormData.append('otp',OtpValue);
+            MyFormData.append('mobile',mobileNo);
+
+            axios.post(URL,{
+                'otp':OtpValue,
+                'mobile':mobileNo
+            }).then(res=>{
+                this.setState({btn:"Login"});
+                if (res.data==1){
+                    toast.success("Verification Success",{position:'bottom-center'});
+                    this.setState({UserRedirect:true});
+                }else{
+                    toast.error("Verification Fail ! Try Again",{position:'bottom-center'});
+                }
+            }).catch(err=>{
+                this.setState({btn:"Login"});
+                toast.error("Verification Fail ! Try Again",{position:'bottom-center'});
+            })
 
         }
     }
 
     render() {
         return (
-
             <Fragment>
                 <Container className="TopSection animated slideInDown">
                     <Row className="d-flex justify-content-center">
@@ -62,6 +86,8 @@ class OtpVerification extends Component {
                             </Row>
                         </Col>
                     </Row>
+
+                    <h1>{this.state.mobileNo}</h1>
                 </Container>
 
                 <ToastContainer
@@ -77,6 +103,8 @@ class OtpVerification extends Component {
                     //theme="light"
                     theme="colored"
                 />
+
+                {this.onUserRedirect()}
             </Fragment>
         );
     }

@@ -6,6 +6,14 @@ import FooterMobile from "../components/common/FooterMobile";
 import OtpVerification from "../components/common/OtpVerification";
 
 class OtpVerificationPage extends Component {
+
+    constructor({match}) {
+        super();
+        this.state={
+            MobileNo:match.params.MobileNo
+        }
+    }
+
     componentDidMount() {
         window.scroll(0,0);
     }
@@ -20,7 +28,7 @@ class OtpVerificationPage extends Component {
                     <NavMenuMobile/>
                 </div>
 
-                <OtpVerification/>
+                <OtpVerification MobileNo={this.state.MobileNo}/>
 
                 <div className="Desktop">
                     <FooterDesktop/>
