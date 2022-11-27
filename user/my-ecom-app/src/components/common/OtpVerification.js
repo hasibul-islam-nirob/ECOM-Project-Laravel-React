@@ -57,7 +57,7 @@ class OtpVerification extends Component {
                     toast.success("Verification Success",{position:'bottom-center'});
                     this.setState({UserRedirect:true});
                 }else{
-                    toast.error("Verification Fail ! Try Again",{position:'bottom-center'});
+                    toast.error("Invalid OTP",{position:'bottom-center'});
                 }
             }).catch(err=>{
                 this.setState({btn:"Login"});
