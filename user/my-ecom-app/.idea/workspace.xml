@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9836cb16-56b1-49f4-91f6-23b0bbc3cb14" name="Default Changelist" comment="" />
+    <list default="true" id="9836cb16-56b1-49f4-91f6-23b0bbc3cb14" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/others/About.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/others/About.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/others/PaymentPolicy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/others/PaymentPolicy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/others/Policy.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/others/Policy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/others/Purchase.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/others/Purchase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/others/Refund.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/others/Refund.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +116,7 @@
       <workItem from="1669051962591" duration="1508000" />
       <workItem from="1669325524562" duration="844000" />
       <workItem from="1669397711177" duration="8987000" />
-      <workItem from="1669535158039" duration="6630000" />
+      <workItem from="1669535158039" duration="8297000" />
     </task>
     <servers />
   </component>

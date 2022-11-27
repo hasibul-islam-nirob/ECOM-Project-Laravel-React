@@ -9,6 +9,7 @@ import ApiURL from "../../api/ApiURL";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DescriptionPlaceholder from "../../placeholder/DescriptionPlaceholder";
+import SessionHelper from "../../SessionHelper/SessionHelper";
 
 class Purchase extends Component {
 
@@ -22,7 +23,7 @@ class Purchase extends Component {
     }
 
     componentDidMount() {
-        let PurchaseGuide = sessionStorage.getItem("purchase_guid");
+        let PurchaseGuide = SessionHelper.getPurchaseSession();
 
         if (PurchaseGuide == null){
             axios.get(ApiURL.sendSiteInfo).then(res=>{
@@ -31,7 +32,7 @@ class Purchase extends Component {
 
                     let jsonData = res.data[0]['purchase_guid'];
                     this.setState({PurchaseGuide:jsonData,loaderDiv:"d-none",mainDiv:""});
-                    sessionStorage.setItem("siteAboutInfo", jsonData);
+                    SessionHelper.setPurchaseSession(jsonData);
 
                 }else{
                     toast.error("Data Not Found, Try Again",{

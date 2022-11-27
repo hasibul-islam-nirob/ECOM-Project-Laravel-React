@@ -9,6 +9,7 @@ import ApiURL from "../../api/ApiURL";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DescriptionPlaceholder from "../../placeholder/DescriptionPlaceholder";
+import SessionHelper from "../../SessionHelper/SessionHelper";
 
 class About extends Component {
     constructor() {
@@ -21,7 +22,7 @@ class About extends Component {
     }
 
     componentDidMount() {
-        let siteAboutInfo = sessionStorage.getItem("siteAboutInfo");
+        let siteAboutInfo = SessionHelper.getAboutSession();
 
         if (siteAboutInfo == null){
             axios.get(ApiURL.sendSiteInfo).then(res=>{
@@ -30,7 +31,7 @@ class About extends Component {
 
                     let jsonData = res.data[0]['about'];
                     this.setState({about:jsonData,loaderDiv:"d-none",mainDiv:""});
-                    sessionStorage.setItem("siteAboutInfo", jsonData);
+                    SessionHelper.setAboutSession(jsonData);
 
                 }else{
                     toast.error("Data Not Found, Try Again",{

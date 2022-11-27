@@ -9,6 +9,7 @@ import ApiURL from "../../api/ApiURL";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DescriptionPlaceholder from "../../placeholder/DescriptionPlaceholder";
+import SessionHelper from "../../SessionHelper/SessionHelper";
 
 class Refund extends Component {
     constructor() {
@@ -21,7 +22,7 @@ class Refund extends Component {
     }
 
     componentDidMount() {
-        let siteRefundInfo = sessionStorage.getItem("refund_policy");
+        let siteRefundInfo = SessionHelper.getRefundSession();
 
         if (siteRefundInfo == null){
             axios.get(ApiURL.sendSiteInfo).then(res=>{
@@ -30,7 +31,7 @@ class Refund extends Component {
 
                     let jsonData = res.data[0]['refund_policy'];
                     this.setState({Refund:jsonData,loaderDiv:"d-none",mainDiv:""});
-                    sessionStorage.setItem("siteAboutInfo", jsonData);
+                    SessionHelper.setRefundSession(jsonData);
 
                 }else{
                     toast.error("Data Not Found, Try Again",{

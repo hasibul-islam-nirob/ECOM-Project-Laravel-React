@@ -9,6 +9,7 @@ import ApiURL from "../../api/ApiURL";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DescriptionPlaceholder from "../../placeholder/DescriptionPlaceholder";
+import SessionHelper from "../../SessionHelper/SessionHelper";
 
 class Policy extends Component {
 
@@ -22,7 +23,7 @@ class Policy extends Component {
     }
 
     componentDidMount() {
-        let sitePolicyInfo = sessionStorage.getItem("policy_policy");
+        let sitePolicyInfo = SessionHelper.getPolicySession();
 
         if (sitePolicyInfo == null){
             axios.get(ApiURL.sendSiteInfo).then(res=>{
@@ -31,7 +32,7 @@ class Policy extends Component {
 
                     let jsonData = res.data[0]['policy_policy'];
                     this.setState({policyPolicy:jsonData,loaderDiv:"d-none",mainDiv:""});
-                    sessionStorage.setItem("sitePolicyInfo", jsonData);
+                    SessionHelper.setPolicySession(jsonData);
 
                 }else{
                     toast.error("Data Not Found, Try Again",{

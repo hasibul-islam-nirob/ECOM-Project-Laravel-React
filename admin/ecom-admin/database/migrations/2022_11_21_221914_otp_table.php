@@ -18,6 +18,7 @@ class OtpTable extends Migration
             $table->string('mobile');
             $table->string('otp');
             $table->string('created_timestamp');
+            $table->string('status');
             $table->string('created_time');
             $table->string('created_date');
         });

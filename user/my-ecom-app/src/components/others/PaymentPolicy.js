@@ -9,6 +9,7 @@ import ApiURL from "../../api/ApiURL";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import DescriptionPlaceholder from "../../placeholder/DescriptionPlaceholder";
+import SessionHelper from "../../SessionHelper/SessionHelper";
 
 class PaymentPolicy extends Component {
 
@@ -22,7 +23,7 @@ class PaymentPolicy extends Component {
     }
 
     componentDidMount() {
-        let sitePaymentInfo = sessionStorage.getItem("payment_policy");
+        let sitePaymentInfo = SessionHelper.getPaymentPolicySession();
 
         if (sitePaymentInfo == null){
             axios.get(ApiURL.sendSiteInfo).then(res=>{
@@ -31,7 +32,7 @@ class PaymentPolicy extends Component {
 
                     let jsonData = res.data[0]['payment_policy'];
                     this.setState({payment:jsonData,loaderDiv:"d-none",mainDiv:""});
-                    sessionStorage.setItem("sitePaymentInfo", jsonData);
+                    SessionHelper.setPaymentPolicySession(jsonData);
 
                 }else{
                     toast.error("Data Not Found, Try Again",{
