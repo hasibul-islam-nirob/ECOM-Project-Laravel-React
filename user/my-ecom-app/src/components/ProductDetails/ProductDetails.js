@@ -3,6 +3,9 @@ import {Breadcrumb, Col, Container, Row} from "react-bootstrap";
 import {Link} from "react-router-dom";
 import ReactHtmlParser from "react-html-parser";
 import ReactDOM from 'react-dom';
+import 'react-inner-image-zoom/lib/InnerImageZoom/styles.min.css';
+import InnerImageZoom from 'react-inner-image-zoom';
+
 class ProductDetails extends Component {
 
     constructor() {
@@ -111,7 +114,16 @@ class ProductDetails extends Component {
                             <Row>
                                 <Col className="p-3 animated " md={6} lg={6} sm={12} xs={12}>
 
-                                    <img className="w-100" id="ImagePreview" src={productBigImg} height="450px"  alt=""/>
+                                    <img className="w-100 d-none" id="ImagePreview" src={productBigImg} height="450px"  alt=""/>
+
+                                    <InnerImageZoom
+                                        id=".ImagePreview"
+                                        zoomType={"hover"}
+                                        zoomScale={1.9}
+                                        src={productBigImg}
+                                        zoomSrc={productBigImg}
+                                    />
+
                                     <Container className="my-3">
                                         <Row>
                                             <Col className="p-1 image-box m-0"  md={3} lg={3} sm={3} xs={3}>
