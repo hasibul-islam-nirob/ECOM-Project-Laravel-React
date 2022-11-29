@@ -29,8 +29,9 @@ class ProductDetails extends Component {
 
     imgOnClick =(event)=>{
         let imgSrc = event.target.getAttribute('src');
-        let ImagePreview = document.getElementById('ImagePreview');
-        ReactDOM.findDOMNode(ImagePreview).setAttribute('src',imgSrc);
+        //let ImagePreview = document.getElementById('ImagePreview');
+        this.setState({previewImg:imgSrc})
+        //ReactDOM.findDOMNode(ImagePreview).setAttribute('src',imgSrc);
     }
 
     PriceOption =(special_price, price)=>{
@@ -54,6 +55,9 @@ class ProductDetails extends Component {
         let ProductData = this.props.ProductData;
         let title = ProductData['ProductList'][0]['title'];
         let productBigImg = ProductData['ProductList'][0]['image'];
+        if(this.state.previewImg==="0"){
+            this.setState({previewImg:productBigImg})
+        }
         let price = ProductData['ProductList'][0]['price'];
         let special_price = ProductData['ProductList'][0]['special_price'];
         let category = ProductData['ProductList'][0]['category'];
@@ -114,14 +118,13 @@ class ProductDetails extends Component {
                             <Row>
                                 <Col className="p-3 animated " md={6} lg={6} sm={12} xs={12}>
 
-                                    <img className="w-100 d-none" id="ImagePreview" src={productBigImg} height="450px"  alt=""/>
+                                    {/*<img className="w-100 d-none" id="ImagePreview" src={productBigImg} height="450px"  alt=""/>*/}
 
                                     <InnerImageZoom
-                                        id=".ImagePreview"
                                         zoomType={"hover"}
                                         zoomScale={1.9}
-                                        src={productBigImg}
-                                        zoomSrc={productBigImg}
+                                        src={this.state.previewImg}
+                                        zoomSrc={this.state.previewImg}
                                     />
 
                                     <Container className="my-3">
