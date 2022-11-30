@@ -33,5 +33,9 @@ class ApiURL{
     // }
     static OTPVerification = this.BaseURL+"OTPVerification";
 
+    static SimilarProduct(Category){
+        return this.BaseURL+"SimilarProduct/"+Category;
+    }
+
 }
 export default ApiURL;

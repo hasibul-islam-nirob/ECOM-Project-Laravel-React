@@ -7,7 +7,6 @@ import ProductDetails from "../components/ProductDetails/ProductDetails";
 import axios from "axios";
 import ApiURL from "../api/ApiURL";
 import ProductDetailsPlaceholder from "../placeholder/ProductDetailsPlaceholder";
-import SuggestedProducts from "../components/ProductDetails/SuggestedProducts";
 
 class ProductDetailsPage extends Component {
     constructor({match}) {
@@ -61,7 +60,6 @@ class ProductDetailsPage extends Component {
                         <NavMenuMobile/>
                     </div>
                     <ProductDetails ProductData={this.state.ProductData}/>
-                    <SuggestedProducts/>
                     <div className="Desktop">
                         <FooterDesktop/>
                     </div>

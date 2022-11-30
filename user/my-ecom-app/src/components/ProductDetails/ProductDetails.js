@@ -5,6 +5,7 @@ import ReactHtmlParser from "react-html-parser";
 import ReactDOM from 'react-dom';
 import 'react-inner-image-zoom/lib/InnerImageZoom/styles.min.css';
 import InnerImageZoom from 'react-inner-image-zoom';
+import SuggestedProducts from "./SuggestedProducts";
 
 class ProductDetails extends Component {
 
@@ -208,7 +209,7 @@ class ProductDetails extends Component {
                         </Col>
                     </Row>
                 </Container>
-
+                <SuggestedProducts Category={category} SubCategory={sub_category}/>
 
             </Fragment>
         );
