@@ -31,6 +31,12 @@ class ProductListController extends Controller
         return $result = ProductListModel::where('title','LIKE',"%{$key}%")->get();
     }
 
+    function SimilarProduct(Request $request){
+        $subCategory = $request->subCategory;
+        $result = ProductListModel::orderBy('id','desc')->where('sub_category',$subCategory)->limit(8)->get();
+        return $result;
+
+    }
 
 
 
