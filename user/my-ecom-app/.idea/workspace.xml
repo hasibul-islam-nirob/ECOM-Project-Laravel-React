@@ -47,7 +47,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2021.1.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -114,6 +114,9 @@
       <workItem from="1669535158039" duration="14322000" />
       <workItem from="1669752120073" duration="3330000" />
       <workItem from="1669812777442" duration="5245000" />
+      <workItem from="1670598517727" duration="46000" />
+      <workItem from="1670598637449" duration="255000" />
+      <workItem from="1671887119782" duration="411000" />
     </task>
     <servers />
   </component>
