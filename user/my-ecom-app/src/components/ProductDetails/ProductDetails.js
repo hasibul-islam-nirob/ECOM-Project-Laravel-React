@@ -203,7 +203,7 @@ class ProductDetails extends Component {
                         </Col>
                         <Col className="p-1" md={6} lg={6} sm={12} xs={12}>
 
-                            <ReviewList/>
+                            <ReviewList productCode={product_code}/>
                         </Col>
                     </Row>
                 </Container>

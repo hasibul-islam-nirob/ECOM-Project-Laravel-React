@@ -36,6 +36,9 @@ class ApiURL{
     static SimilarProduct(Category){
         return this.BaseURL+"SimilarProduct/"+Category;
     }
+    static ReviewList(productCode){
+        return this.BaseURL+"ReviewList/"+productCode;
+    }
 
 }
 export default ApiURL;

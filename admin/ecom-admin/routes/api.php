@@ -6,6 +6,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NotificationController;
 use App\Http\Controllers\ProductDetailsController;
 use App\Http\Controllers\ProductListController;
+use App\Http\Controllers\ProductReviewController;
 use App\Http\Controllers\SiteInfoController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\VisitorController;
@@ -31,3 +32,7 @@ Route::get('/NotificationHistory', [NotificationController::class, 'Notification
 
 Route::post('/CreateOTP', [LoginController::class, 'CreateOTP']);
 Route::post('/OTPVerification', [LoginController::class, 'OTPVerification']);
+
+Route::get('/ReviewList/{code}', [ProductReviewController::class, 'ReviewList']);
+
+
